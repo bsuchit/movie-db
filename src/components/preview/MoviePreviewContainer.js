@@ -9,7 +9,9 @@ const mapStateToProps = (state, props) => {
         poster: _.get(state, `movies.previews.${props.title}.Poster`, ''),
         ratings: _.get(state, `movies.previews.${props.title}.Ratings`, []),
         description: _.get(state, `movies.previews.${props.title}.Plot`, ''),
-        loading: _.get(state, 'movies.previewLoading', true)
+        loading: _.get(state, 'movies.previewLoading', true),
+        runtime: _.get(state, `movies.previews.${props.title}.Runtime`, '0 Mins'),
+        language: _.get(state, `movies.previews.${props.title}.Language`, 'English')
     }
 };
 
