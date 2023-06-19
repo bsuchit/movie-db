@@ -6,7 +6,6 @@
 .row{
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .auto_margin{
@@ -24,4 +23,8 @@
 
 .preview_header{
     margin-bottom: 10px;
+}
+
+.average_rating{
+    padding-bottom: 10px;
 }

@@ -13,9 +13,9 @@ export const fetchData = createAsyncThunk(
 
 export const fetchMoviePoster = createAsyncThunk(
     'content/fetchMoviePoster',
-    async (title) => {
-      const res = await fetchPoster(title);
-      return _.get(res, 'results', []);
+    async (data) => {
+      const res = await fetchPoster(data);
+      return res || {};
     }
 );
 
