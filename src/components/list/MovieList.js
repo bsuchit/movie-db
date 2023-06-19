@@ -1,45 +1,27 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import { Button, Popup, Input } from "semantic-ui-react"; 
 
-import FilterPopup from "components/filter/FilterPopup";
 import searchMovies from "utils/utils";
 import 'components/components.scss';
 
 import MovieTile from "./MovieTile";
 import './MovieList.scss';
 import MoviePreviewContainer from "components/preview/MoviePreviewContainer";
-
-const sortByData = [
-  {
-    name: 'episode_id',
-    label: 'Episode'
-  },
-  {
-    name: 'release_date',
-    label: 'Release Date'
-  }
-];
-
+import ActionBar from "./ActionBar";
 function MovieList({ movies = [] }) {
   const [moviesState, setMoviesState] = useState([]);
-  const [searchText, setSearchText] = useState();
-  const [sortBySelection, setSortBySelection] = useState();
   const [selection, setSelection] = useState();
 
   useEffect(() => {
     setMoviesState(movies);
   }, [movies]);
 
-  const handleOnChange = (e) => {
-    e.preventDefault();
-    setSearchText(e.target.value);
-    setMoviesState(searchMovies(movies, e.target.value));
+  const handleOnSearch = (searchText) => {
+    setMoviesState(searchMovies(movies, searchText));
   };
 
-  const handleOnFilterSelected = (name, checked) => {
-    setSortBySelection(checked ? name : null);
+  const handleOnSort= (name) => {
     setMoviesState(_.orderBy(moviesState, [name], ['asc']));
   };
 
@@ -48,27 +30,7 @@ function MovieList({ movies = [] }) {
   };
 
   return <div>
-    <div className="row list_header">
-      <Popup 
-        content={<FilterPopup
-          data={sortByData}
-          selection={sortBySelection}
-          onSelected={handleOnFilterSelected}
-        />} 
-        on='click'
-        pinned
-        trigger={<Button className="sortby_button" content="Sort By" />}
-        position="bottom left"
-      />
-      <Input
-        type="text"
-        className="search_input"
-        placeholder="Type to search..."
-        value={searchText}
-        onChange={handleOnChange}
-        icon='search'
-      />
-    </div>
+    <ActionBar onSearch={handleOnSearch} onSort={handleOnSort} />
     {
       !_.isEmpty(moviesState) ?
     <div className="list_container">
