@@ -9,7 +9,7 @@ import 'components/components.scss';
 
 import MovieTile from "./MovieTile";
 import './MovieList.scss';
-import MoviePreview from "components/preview/MoviePreview";
+import MoviePreviewContainer from "components/preview/MoviePreviewContainer";
 
 const sortByData = [
   {
@@ -85,7 +85,7 @@ function MovieList({ movies = [] }) {
       </div>
       {
         selection ?
-          <MoviePreview
+          <MoviePreviewContainer
             title={selection.title}
             description={selection.opening_crawl}
             episode={selection.episode_id}

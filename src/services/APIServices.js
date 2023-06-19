@@ -7,3 +7,9 @@ export default function fetchMovies(){
     .then(response => response.data)
     .catch(err => err);
 }
+
+export function fetchPoster(title){
+    return axios.get(`${ENDPOINTS.FETCH_POSTER}&query=star wars: ${title}`)
+    .then(response => response.data)
+    .catch(err => err);
+}

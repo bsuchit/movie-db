@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
+import _ from 'lodash';
 
-import fetchData from 'redux/actions/actions';
-
+import fetchData, { fetchMoviePoster } from 'redux/actions/actions';
 import searchMovies from 'utils/utils';
 
 const initialState = {
   data: [],
   isLoading: true,
   error: null,
+  posters: {}
 };
 
 export const moviesSlice = createSlice({
@@ -16,7 +17,7 @@ export const moviesSlice = createSlice({
   reducers: {
     searchData: (state, action) => {
       state.data = searchMovies(state.data, action.payload);
-    }
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchData.pending, (state) => {
@@ -30,6 +31,9 @@ export const moviesSlice = createSlice({
       state.isLoading = false;
       state.data = [];
       state.error = true;
+    })
+    builder.addCase(fetchMoviePoster.fulfilled, (state, action) => {
+      state.posters[action.meta.arg] = _.get(action, 'payload.0.poster_path');
     })
   },
 });
