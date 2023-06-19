@@ -8,7 +8,7 @@ const initialState = {
   data: [],
   isLoading: true,
   error: null,
-  posters: {}
+  previews: {}
 };
 
 export const moviesSlice = createSlice({
@@ -32,8 +32,13 @@ export const moviesSlice = createSlice({
       state.data = [];
       state.error = true;
     })
+    builder.addCase(fetchMoviePoster.pending, (state, action) => {
+      state.previewLoading = true;
+      state.previews[_.get(action, 'meta.arg.title')] = _.get(action, 'payload');
+    })
     builder.addCase(fetchMoviePoster.fulfilled, (state, action) => {
-      state.posters[action.meta.arg] = _.get(action, 'payload.0.poster_path');
+      state.previewLoading = false;
+      state.previews[_.get(action, 'meta.arg.title')] = _.get(action, 'payload');
     })
   },
 });

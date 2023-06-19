@@ -6,14 +6,18 @@ import { fetchMoviePoster } from "redux/actions/actions";
 
 const mapStateToProps = (state, props) => {
     return {
-        poster: _.get(state, `movies.posters.${props.title}`, [])
+        poster: _.get(state, `movies.previews.${props.title}.Poster`, ''),
+        ratings: _.get(state, `movies.previews.${props.title}.Ratings`, []),
+        description: _.get(state, `movies.previews.${props.title}.Plot`, ''),
+        loading: _.get(state, 'movies.previewLoading', true)
     }
 };
 
 const mapDispatchToProps = (dispatch, props) => {
     return {
         getPoster: () => {
-            dispatch(fetchMoviePoster(props.title));
+            const date = new Date(props.releaseDate);
+            dispatch(fetchMoviePoster({ title: props.title, year: date.getFullYear() }));
         }
     }
 };

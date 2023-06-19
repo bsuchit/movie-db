@@ -87,7 +87,6 @@ function MovieList({ movies = [] }) {
         selection ?
           <MoviePreviewContainer
             title={selection.title}
-            description={selection.opening_crawl}
             episode={selection.episode_id}
             director={selection.director}
             producer={selection.producer}
