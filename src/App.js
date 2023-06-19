@@ -1,11 +1,35 @@
-import './App.css';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-function App() {
+import MovieList from 'components/list/MovieList';
+function App({ onMount, movies = [], isLoading = false, error = false}) {
+  useEffect(() => {
+    onMount && onMount();
+  }, [onMount]);
+
+  if (error) {
+    return <label>Error Occurred</label>
+  }
+
   return (
-    <div className="App">
-      Hello, Movie DB. 
+    <div>
+      {
+        isLoading ? 
+        <label>Loading...</label>
+        :
+        <MovieList
+          movies={movies}
+        /> 
+      }
     </div>
   );
 }
+
+App.propTypes = {
+  onMount: PropTypes.func,
+  movies: PropTypes.array,
+  isLoading: PropTypes.bool,
+  error: PropTypes.bool
+};
 
 export default App;
