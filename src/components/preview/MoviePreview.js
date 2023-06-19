@@ -5,7 +5,9 @@ import 'components/components.scss';
 import { Divider, Label, List, Loader, Rating } from "semantic-ui-react";
 import _ from "lodash";
 
-function MoviePreview({ title, episode, director, releaseDate, description, producer, getPoster, poster, ratings, loading }) {
+function MoviePreview({
+    title, episode, director, releaseDate, description, producer, getPoster, poster, ratings, loading, runtime, language
+}) {
     useEffect(() => {
         getPoster();
     }, [title]);
@@ -20,14 +22,19 @@ function MoviePreview({ title, episode, director, releaseDate, description, prod
                 { poster && 
                     <img className="poster" src={poster} />
                 }
-                <h1>{`${episode} - ${title}`}</h1>
+                <div>
+                    <h1>{`${episode} - ${title}`}</h1>
+                    <div>{`Release Date - ${releaseDate}`}</div>
+                    <div>{`Director - ${director}`}</div>
+                    <div>{`Producer - ${producer}`}</div>
+                    <List className="column">
+                        <List.Item><Label>{runtime}</Label></List.Item>
+                        <List.Item><Label>{language}</Label></List.Item>
+                    </List>
+                </div>
             </div>
             <Divider />
             <p><h5>Plot</h5>{description}</p>
-            <Divider />
-            <div>{`Release Date - ${releaseDate}`}</div>
-            <div>{`director - ${director}`}</div>
-            <div>{`Producer - ${producer}`}</div>
             <Divider />
             <div className="average_rating">Average Rating - <Rating defaultRating={5} maxRating={10} /></div>
             <div>
@@ -57,7 +64,9 @@ MoviePreview.propTypes = {
     getPoster: PropTypes.func,
     poster: PropTypes.string,
     ratings: PropTypes.array,
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    runtime: PropTypes.string,
+    language: PropTypes.string
 };
 
 export default MoviePreview;
