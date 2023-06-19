@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given App.js should render app.js 1`] = `
+<div>
+  <img
+    class="ui image logo"
+    src="star-wars-logo.png"
+  />
+  <div>
+    <div>
+      <div>
+        <div
+          class="row list_header"
+        >
+          <button
+            class="ui button sortby_button"
+          >
+            Sort By
+          </button>
+          <div
+            class="ui icon input search_input"
+            data-testid="search"
+          >
+            <input
+              placeholder="Type to search..."
+              type="text"
+              value=""
+            />
+            <i
+              aria-hidden="true"
+              class="search icon"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="list_container"
+      >
+        <div
+          class="list"
+        >
+          <div
+            class="movie_card"
+          >
+            <div
+              class="info_section"
+            >
+              <div
+                class="movie_header"
+              >
+                <div
+                  class="column"
+                >
+                  <h1>
+                    A New Hope
+                  </h1>
+                  <p
+                    class="type"
+                  >
+                    Episode undefined
+                  </p>
+                </div>
+                <div
+                  class="vertical"
+                />
+                <div
+                  class="column"
+                >
+                  <h4>
+                    Release Date: 1980-12-05
+                  </h4>
+                  <h4>
+                    Director: undefined
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="movie_card"
+          >
+            <div
+              class="info_section"
+            >
+              <div
+                class="movie_header"
+              >
+                <div
+                  class="column"
+                >
+                  <h1>
+                    Return of the jedi
+                  </h1>
+                  <p
+                    class="type"
+                  >
+                    Episode undefined
+                  </p>
+                </div>
+                <div
+                  class="vertical"
+                />
+                <div
+                  class="column"
+                >
+                  <h4>
+                    Release Date: 1983-05-25
+                  </h4>
+                  <h4>
+                    Director: undefined
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="auto_margin"
+        >
+          Please select movie to see preview.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Given App.js should show error WHEN failed 1`] = `
+<label>
+  Error Occurred
+</label>
+`;
+
+exports[`Given App.js should show loader WHEN loading 1`] = `
+<div>
+  <img
+    class="ui image logo"
+    src="star-wars-logo.png"
+  />
+  <div>
+    <div
+      class="ui active text loader"
+    >
+      Loading...
+    </div>
+  </div>
+</div>
+`;
