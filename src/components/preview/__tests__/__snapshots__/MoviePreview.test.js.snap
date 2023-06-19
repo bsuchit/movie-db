@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given FilterPopup should render correctly with given props 1`] = `
+<div
+  class="column preview"
+>
+  <div
+    class="row preview_header"
+  >
+    <img
+      class="poster"
+      src="https://examplexyz.com/poster.png"
+    />
+    <div>
+      <h1>
+        4 - A New Hope
+      </h1>
+      <div>
+        Release Date - 1977-05-25
+      </div>
+      <div>
+        Director - Chris Nolan
+      </div>
+      <div>
+        Producer - Gary Kurtz
+      </div>
+      <div
+        class="ui list column"
+        role="list"
+      >
+        <div
+          class="item"
+          role="listitem"
+        >
+          <div
+            class="ui label"
+          >
+            121 min
+          </div>
+        </div>
+        <div
+          class="item"
+          role="listitem"
+        >
+          <div
+            class="ui label"
+          >
+            English, Hindi
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="ui divider"
+  />
+  <p>
+    <h5>
+      Plot
+    </h5>
+    Plot
+  </p>
+  <div
+    class="ui divider"
+  />
+  <div
+    class="average_rating"
+  >
+    Average Rating - 
+    <div
+      class="ui rating"
+      role="radiogroup"
+      tabindex="-1"
+    >
+      <i
+        aria-checked="false"
+        aria-posinset="1"
+        aria-setsize="10"
+        class="active icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="false"
+        aria-posinset="2"
+        aria-setsize="10"
+        class="active icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="false"
+        aria-posinset="3"
+        aria-setsize="10"
+        class="active icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="false"
+        aria-posinset="4"
+        aria-setsize="10"
+        class="active icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="true"
+        aria-posinset="5"
+        aria-setsize="10"
+        class="active icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="false"
+        aria-posinset="6"
+        aria-setsize="10"
+        class="icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="false"
+        aria-posinset="7"
+        aria-setsize="10"
+        class="icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="false"
+        aria-posinset="8"
+        aria-setsize="10"
+        class="icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="false"
+        aria-posinset="9"
+        aria-setsize="10"
+        class="icon"
+        role="radio"
+        tabindex="0"
+      />
+      <i
+        aria-checked="false"
+        aria-posinset="10"
+        aria-setsize="10"
+        class="icon"
+        role="radio"
+        tabindex="0"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      class="ui list row"
+      role="list"
+    >
+      <div
+        class="item"
+        role="listitem"
+      >
+        <div
+          class="ui label"
+        >
+          IMDB
+          <div
+            class="detail"
+          >
+            8.6/10
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Given FilterPopup should show loader WHEN loading 1`] = `
+<div
+  class="ui active text loader"
+>
+  Loader
+</div>
+`;

@@ -51,6 +51,7 @@ function ActionBar({ onSearch, onSort }) {
         value={searchText}
         onChange={handleOnChange}
         icon='search'
+        data-testid='search'
       />
     </div>
   </div>;

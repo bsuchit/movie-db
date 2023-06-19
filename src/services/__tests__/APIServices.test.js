@@ -3,6 +3,7 @@ import axios from 'axios';
 import fetchMovies, { fetchPoster } from 'services/APIServices';
 
 jest.mock('axios');
+
 describe("Given APIServices.js", () => {
     it("fetchMovies should retrun data sucessfully WHEN API is sucessful", () => {
       const movies = [{

@@ -23,6 +23,7 @@ function FilterPopup({ data = [], selection = [], onSelected }){
                         label={label}
                         checked={selection && name === value}
                         onChange={handleOnChange}
+                        data-testid={name}
                     />
                 </List.Item>
             ))

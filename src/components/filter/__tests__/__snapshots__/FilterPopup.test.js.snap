@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given FilterPopup should render correctly with given props 1`] = `
+<div
+  class="ui list"
+  role="list"
+>
+  <div
+    class="item"
+    role="listitem"
+  >
+    <div
+      class="ui checkbox"
+      data-testid="episode_id"
+    >
+      <input
+        class="hidden"
+        name="episode_id"
+        readonly=""
+        tabindex="0"
+        type="checkbox"
+        value=""
+      />
+      <label>
+        Episode
+      </label>
+    </div>
+  </div>
+  <div
+    class="item"
+    role="listitem"
+  >
+    <div
+      class="ui checkbox"
+      data-testid="release_date"
+    >
+      <input
+        class="hidden"
+        name="release_date"
+        readonly=""
+        tabindex="0"
+        type="checkbox"
+        value=""
+      />
+      <label>
+        Release Date
+      </label>
+    </div>
+  </div>
+</div>
+`;
