@@ -10,9 +10,8 @@ function MovieTile({ data = {}, onClick, selected = false }) {
   };
 
   return (<div className="movie_card">
-      <div className={classNames('info_section', { selected })} onClick={handleOnClick} >
+      <div className={classNames('info_section', { selected })} onClick={handleOnClick} data-testid={data.title}>
         <div className="movie_header">
-          {/* <img className="locandina" src="https://movieplayer.net-cdn.it/t/images/2017/12/20/bright_jpg_191x283_crop_q85.jpg" /> */}
           <div className="column">
             <h1>{data.title}</h1>
             <p className="type">{`Episode ${data.episode_id}`}</p>

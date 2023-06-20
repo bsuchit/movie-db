@@ -17,7 +17,7 @@ function MoviePreview({
     }
 
     return (
-        <div className="column preview">
+        <div className="column preview" data-testid={`preview_${title}`}>
             <div className="row preview_header">
                 { poster && 
                     <img className="poster" src={poster} />
