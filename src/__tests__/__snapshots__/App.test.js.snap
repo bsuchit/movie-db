@@ -44,6 +44,7 @@ exports[`Given App.js should render app.js 1`] = `
           >
             <div
               class="info_section"
+              data-testid="A New Hope"
             >
               <div
                 class="movie_header"
@@ -81,6 +82,7 @@ exports[`Given App.js should render app.js 1`] = `
           >
             <div
               class="info_section"
+              data-testid="Return of the jedi"
             >
               <div
                 class="movie_header"

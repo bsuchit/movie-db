@@ -3,6 +3,7 @@
 exports[`Given FilterPopup should render correctly with given props 1`] = `
 <div
   class="column preview"
+  data-testid="preview_A New Hope"
 >
   <div
     class="row preview_header"
