@@ -19,6 +19,7 @@ function MovieList({ movies = [] }) {
 
   const handleOnSearch = (searchText) => {
     setMoviesState(searchMovies(movies, searchText));
+    setSelection(null);
   };
 
   const handleOnSort= (name) => {
