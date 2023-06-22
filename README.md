@@ -1,4 +1,4 @@
-this is the Star Wars Movie DB site looks:
+This is how the Star Wars Movie DB site looks:
 
 ![image](https://github.com/bsuchit/movie-db/assets/136799862/82fd269f-82dd-41f5-ac75-62b531671ad9)
 
