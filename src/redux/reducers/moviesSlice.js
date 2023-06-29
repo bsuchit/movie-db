@@ -32,9 +32,8 @@ export const moviesSlice = createSlice({
       state.data = [];
       state.error = true;
     })
-    builder.addCase(fetchMoviePoster.pending, (state, action) => {
+    builder.addCase(fetchMoviePoster.pending, (state) => {
       state.previewLoading = true;
-      state.previews[_.get(action, 'meta.arg.title')] = _.get(action, 'payload');
     })
     builder.addCase(fetchMoviePoster.fulfilled, (state, action) => {
       state.previewLoading = false;
