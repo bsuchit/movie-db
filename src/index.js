@@ -10,8 +10,6 @@ import AppContainer from 'AppContainer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <AppContainer />
-    </React.StrictMode>
+    <AppContainer />
   </Provider>
 );
